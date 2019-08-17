@@ -32,10 +32,10 @@ class TestClassSll():
                 sll.head = node
                 assert sll.isEmpty() == False
 
-        def test_addFront(self):
+        def test_addNode(self):
                 sll = SLL()
                 sll.head
-                sll.addFront('cpp')
+                sll.addNode('cpp')
                 result = str(sll.head)
                 expected = 'SLLNode object: data=cpp'
                 assert result == expected
@@ -46,10 +46,10 @@ class TestClassSll():
                 # Test an empty Linked List
                 assert size == 0
                 # Test Linked List with some nodes
-                sll.addFront(1)
-                sll.addFront(2)
-                sll.addFront(3)
-                sll.addFront(4)
+                sll.addNode(1)
+                sll.addNode(2)
+                sll.addNode(3)
+                sll.addNode(4)
                 size = sll.size()
                 assert size == 4
 
@@ -58,9 +58,9 @@ class TestClassSll():
                 # Test an empty Linked List
                 assert sll.search(5) == 'Linked List is empty.'
                 # Test Linked List with some nodes
-                sll.addFront(1)
-                sll.addFront(2)
-                sll.addFront(3)
+                sll.addNode(1)
+                sll.addNode(2)
+                sll.addNode(3)
                 assert sll.search('python') == False
                 assert sll.search(3) == True
 
@@ -69,9 +69,9 @@ class TestClassSll():
                 # Test an empty Linked List
                 assert str(sll.remove(5)) == 'Linked List is empty. No Nodes to remove.'
                 # Test Linked List with some nodes
-                sll.addFront(1)
-                sll.addFront(2)
-                sll.addFront(3)
+                sll.addNode(1)
+                sll.addNode(2)
+                sll.addNode(3)
                 assert str(sll.remove(24)) == 'A Node with given data is not present.'
                 assert sll.search(2) == True
                 sll.remove(2)

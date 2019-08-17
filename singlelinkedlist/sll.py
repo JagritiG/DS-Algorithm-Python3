@@ -40,7 +40,7 @@ class SLL:
         def isEmpty(self):
                 return self.head is None  # self.head == None
 
-        def addFront(self, new_data):
+        def addNode(self, new_data):
                 """Add a Node whose data is the new_data argument to the
                 front of the Linked List.
                 """
