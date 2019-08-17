@@ -2,4 +2,5 @@
 /.idea
 /.pytest_cache
 /singlylinkedlist/.pytest_cache
+/doublylinkedlist/.pytest_cache
 *.pyc

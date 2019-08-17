@@ -1,12 +1,13 @@
-class SLLNode:
+class DLLNode:
 
         def __init__(self, data):
                 self.data = data
                 self.next = None
+                self.previous = None
 
         def __repr__(self):
                 """Returns a printable representation of object we call it on."""
-                return "SLLNode object: data={}".format(self.data)
+                return "DLLNode object: data={}".format(self.data)
 
         def getData(self):
                 """Return the self.data attribute."""
@@ -28,25 +29,28 @@ class SLLNode:
                 """
                 self.next = new_next
 
+        def getPrevious(self):
+                """Return the self.previous attribute."""
+                return self.previous
 
-class SLL:
+        def setPrevious(self, new_previous):
+                """Replace the existing value of the self.previous attribute
+                with the new_previous parameter.
+                """
+                self.previous = new_previous
+
+
+class DLL:
 
         def __init__(self):
                 self.head = None
 
+
         def __repr__(self):
-                return "SLL object: head={}".format(self.head)
+                return "DLL object: head=".format(self.head)
 
         def isEmpty(self):
                 return self.head is None  # self.head == None
-
-        def addNode(self, new_data):
-                """Add a Node whose data is the new_data argument to the
-                front of the Linked List.
-                """
-                temp = SLLNode(new_data)
-                temp.setNext(self.head)
-                self.head = temp
 
         def size(self):
                 """Traverses the Linked List and returns the number of nodes
@@ -65,7 +69,8 @@ class SLL:
 
         def search(self, data):
                 """Traverses the Linked List and returns True if the the data searched
-                for is present in one of the Nodes. Otherwise, it returns False."""
+                for is present in one of the Nodes. Otherwise, it returns False.
+                """
                 if self.head is None:
                         return "Linked List is empty."
 
@@ -78,27 +83,40 @@ class SLL:
 
                 return False
 
+        def addNode(self, new_data):
+                """Add a Node whose data is the new_data argument to the
+                front of the Linked List.
+                """
+                temp = DLLNode(new_data)
+                temp.setNext(self.head)
+
+                if self.head is not None:
+                        self.head.setPrevious(temp)
+
+                self.head = temp
+
         def remove(self, data):
                 """Removes the first occurance of a Node that contains the data argument
                 as its self.data variable. Returns nothing.
                 """
                 if self.head is None:
                         return "Linked List is empty. No Nodes to remove."
+
                 current = self.head
-                previous = None
                 found = False
                 while not found:
                         if current.getData() == data:
                                 found = True
                         else:
-                                if current.getNext() == None:
+                                if current.getNext() is None:
                                         return "A Node with given data is not present."
-
                                 else:
-                                        previous = current
                                         current = current.getNext()
-                if previous is None:
+
+                if current.previous is None:
                         self.head = current.getNext()
                 else:
-                        previous.setNext(current.getNext())
+                        current.previous.setNext(current.getNext())
+                        current.next.previous(current.getPrevius)
+
 
