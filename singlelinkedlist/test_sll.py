@@ -1,11 +1,6 @@
 from sll import SLLNode, SLL
 
 
-# @pytest.fixture()
-# def node():
-#         node = SLLNode('apple')
-#         return node
-
 class TestClassSll():
 
         def test_getData(self):
