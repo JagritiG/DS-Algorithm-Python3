@@ -1,7 +1,7 @@
 from dll import DLLNode, DLL
 
 
-class TestClassDll():
+class TestClassDll:
 
         def test_getData(self):
                 node = DLLNode('Python')

@@ -1,7 +1,7 @@
 from sll import SLLNode, SLL
 
 
-class TestClassSll():
+class TestClassSll:
 
         def test_getData(self):
                 node = SLLNode('apple')
