@@ -1,4 +1,3 @@
-# Create a hashtable all at once
 class HashTable:
 
     def __init__(self):
