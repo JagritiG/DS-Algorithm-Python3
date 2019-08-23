@@ -6,5 +6,4 @@ hashtable_simple.py
 /doublylinkedlist/.pytest_cache
 *.pyc
 /Graphs
-/Trees
 /Heap

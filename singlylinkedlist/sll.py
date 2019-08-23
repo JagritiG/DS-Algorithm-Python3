@@ -91,7 +91,7 @@ class SLL:
                         if current.getData() == data:
                                 found = True
                         else:
-                                if current.getNext() == None:
+                                if current.getNext() is None:
                                         return "A Node with given data is not present."
 
                                 else:
