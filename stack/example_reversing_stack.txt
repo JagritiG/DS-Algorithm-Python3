@@ -1,0 +1,3 @@
+This is an example of reversing data using stack.
+File name is example_reversing_stack.txt.
+Function used in this example are reverse_file().
