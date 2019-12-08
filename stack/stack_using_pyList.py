@@ -9,7 +9,8 @@ class PyListStack:
 
     def __init__(self):
         """Create an empty Stack."""
-        self._data = []                        # non public list instance
+        self._data = []                     # non public list instance
+        self.temp_list = []
 
     def __len__(self):
         """Return the number of elements in the stack."""
@@ -41,7 +42,19 @@ class PyListStack:
             raise Empty('Stack is empty')
         return self._data.pop()                 # remove last item from list
 
+    def pop_all(self):
+        """Remove all the elements from a stack recursively."""
+        if self._data:
+            self.pop()
+            return self.pop_all()
 
-
-
+    # def min_item(self):
+    #     """Returns the minimum element of the stack."""
+    #     if self._data:
+    #         item = self.top()
+    #         self.temp_list.append(item)
+    #         self.pop()
+    #         return self.min_item()
+    #
+    #     return min(self.temp_list)
 

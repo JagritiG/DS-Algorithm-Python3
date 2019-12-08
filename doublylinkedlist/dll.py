@@ -45,7 +45,6 @@ class DLL:
         def __init__(self):
                 self.head = None
 
-
         def __repr__(self):
                 return "DLL object: head=".format(self.head)
 
@@ -120,3 +119,11 @@ class DLL:
                         current.next.previous(current.getPrevius)
 
 
+if __name__ == "__main__":
+
+    d = DLL()
+    d.addNode(1)
+    d.addNode(2)
+    d.addNode(3)
+    print(d.size())
+    print(d.head)

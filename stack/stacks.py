@@ -31,3 +31,9 @@ class Stack:
     def isEmpty(self):
         """Returns True if list is empty. Else, returns False."""
         return self.items == []
+
+    def pop_all(self):
+        """Remove all the elements from a stack recursively."""
+        if self.items:
+            self.pop()
+            return self.pop_all()

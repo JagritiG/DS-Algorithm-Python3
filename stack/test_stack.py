@@ -40,6 +40,14 @@ class TestClassStack:
         stack.push('Python')
         assert stack.isEmpty() == False
 
-
+    def test_pop_all(self):
+        stack = Stack()
+        stack.push("A")
+        stack.push("B")
+        stack.push("C")
+        stack.push("D")
+        assert stack.items == ["A", "B", "C", "D"]
+        stack.pop_all()
+        assert stack.items == []
 
 
