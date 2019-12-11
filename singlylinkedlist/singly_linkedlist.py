@@ -33,9 +33,9 @@ class Sll:
         return self.head is None
 
     def add_at_head(self, new_data):
-        new = SllNode(new_data)
-        new.next = self.head
-        self.head = new
+        new_node = SllNode(new_data)
+        new_node.next = self.head
+        self.head = new_node
 
     def insert_at_nth_pos(self, data, n):
 
@@ -50,9 +50,13 @@ class Sll:
         if not self.head:
             self.head = new_node
 
-        elif n == 0:                    # when add at first position
-            new_node.next = self.head
-            self.head = new_node
+        # when add at first position
+        elif n == 0:
+            self.add_at_head(data)
+
+        # when add at last position
+        elif n == self.list_size():
+            self.add_at_tail(data)
 
         else:
             previous = None
@@ -128,7 +132,7 @@ class Sll:
 
         return False
 
-    # Remove given data
+    # Remove given data by value
     def remove(self, data):
         # When linked list is empty
         if not self.head:
@@ -183,7 +187,6 @@ class Sll:
         else:
             current = self.head
             prev_node = None
-            next_node = None
             while current:
                 next_node = current.next
                 current.next = prev_node
@@ -210,13 +213,13 @@ if __name__ == "__main__":
         s.add_at_head(12)
         s.add_at_head(8)
         s.add_at_head(9)
-        s.insert_at_nth_pos(3, 3)
+        s.insert_at_nth_pos(3, 4)
         # print(s.head)
         # print('Created linked list is:')
         # s.print_list()
         # s.add_at_tail(7)
-        s.add_at_tail(1)
-        # print(s.head)
+        # s.add_at_tail(1)
+        # print(s.head5
         # print('Created linked list is:')
         # s.print_list()
         # print("Delete nth node:")
