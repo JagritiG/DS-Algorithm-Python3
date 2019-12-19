@@ -21,7 +21,6 @@ def remove_duplicates(head):
         current = previous.next
 
 
-
 if __name__ == "__main__":
 
     sll = Sll()
@@ -29,7 +28,7 @@ if __name__ == "__main__":
     sll.add_at_tail(2)
     sll.add_at_tail(3)
     sll.add_at_tail(2)
-    sll.add_at_tail(1)
+    sll.add_at_tail(4)
     sll.add_at_tail(2)
     sll.add_at_tail(1)
     sll.add_at_tail(4)

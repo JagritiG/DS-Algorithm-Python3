@@ -180,6 +180,7 @@ class Dll:
             current.prev = previous.prev
 
     def search(self, data):
+
         if not self.head:
             return "Linked list is empty"
 
@@ -240,12 +241,12 @@ if __name__ == "__main__":
     print(d.size_dll())
     print("Elements of the list:")
     d.print_dll()
-    d.delete_nth_node(2)
-    print("Elements of the list:")
-    d.print_dll()
-    print("Head of the list:")
-    print(d.head)
-    print(d.search(4))
+    # d.delete_nth_node(2)
+    # print("Elements of the list:")
+    # d.print_dll()
+    # print("Head of the list:")
+    # print(d.head)
+    # print(d.search(4))
     d.remove(3)
     print("Elements of the list:")
     d.print_dll()
