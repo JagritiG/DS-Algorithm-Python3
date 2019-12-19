@@ -15,6 +15,8 @@
 
 
 # Method-2:
+#                 0    10   5    0    0    20   10   15   35
+# stock_price = [410, 420, 415, 395, 390, 410, 400, 405, 425]
 # Time complexity: O(n)
 # Space complexity: O(1)
 def buy_sell_stock(arr):
