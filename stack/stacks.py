@@ -28,7 +28,7 @@ class Stack:
         """Returns the length of the list."""
         return len(self.items)
 
-    def isEmpty(self):
+    def is_empty(self):
         """Returns True if list is empty. Else, returns False."""
         return self.items == []
 
@@ -37,3 +37,21 @@ class Stack:
         if self.items:
             self.pop()
             return self.pop_all()
+
+
+if __name__ == "__main__":
+
+    s = Stack()
+    print(s.is_empty())
+    s.push("A")
+    s.push("B")
+    s.push("C")
+    s.push("D")
+    print(s.is_empty())
+    print(s.peek())
+    s.pop()
+    print(s.peek())
+    s.pop_all()
+    print(s.peek())
+    s.push("A")
+    print(s.peek())

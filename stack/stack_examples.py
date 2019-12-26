@@ -23,7 +23,7 @@ def reverse_file(filename):
 
 # ToDo: Match delimiters using stack
 def is_matched(expr):
-    """Return True if all delimeters are properly match; False otherwise."""
+    """Return True if all delimiters are properly match; False otherwise."""
 
     lefty = '({['                   # opening delimiters
     righty = ')}]'                  # respective closing delimiters
