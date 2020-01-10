@@ -7,7 +7,6 @@ hashtable_simple.py
 *.pyc
 /Graphs
 /Heap
-/Trees/testexample
 /test_codes
 /ctci
 /ppt
