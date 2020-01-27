@@ -26,8 +26,8 @@ class Sll:
         self.head = None
 
     def __repr__(self):
-                """Returns a printable representation of object we call it on."""
-                return "{}".format(self.head)
+        """Returns a printable representation of object we call it on."""
+        return "{}".format(self.head)
 
     def is_empty(self):
         return self.head is None

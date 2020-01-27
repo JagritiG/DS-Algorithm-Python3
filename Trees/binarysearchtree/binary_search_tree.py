@@ -54,7 +54,7 @@ class BST:
         elif data > current_node.data and current_node.right:
             return self._search(data, current_node.right)
         if data == current_node.data:
-            return True
+            return
 
     # Method-1: BST property check using inorder print
     def inorder_bst(self):

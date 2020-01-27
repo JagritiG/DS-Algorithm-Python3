@@ -6,7 +6,6 @@ hashtable_simple.py
 /doublylinkedlist/.pytest_cache
 *.pyc
 /Graphs
-/Heap
 /test_codes
 /ctci
 /ppt
